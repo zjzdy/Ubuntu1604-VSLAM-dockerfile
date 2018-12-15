@@ -31,7 +31,7 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
 wget https://bootstrap.pypa.io/get-pip.py && \
 python3 get-pip.py && \
 rm get-pip.py && \
-pip3 install numpy \
+pip3 install numpy
 
 # Install OpenCV
 RUN wget https://github.com/opencv/opencv/archive/$OPENCV_VERSION.zip -O opencv3.zip && \
@@ -61,7 +61,7 @@ make -j$(nproc) && \
 make install && \
 ldconfig && \
 cd / && \
-rm -rf /opencv /opencv_contrib \
+rm -rf /opencv /opencv_contrib
 
 # Install Eigen3
 RUN wget http://bitbucket.org/eigen/eigen/get/3.3.7.zip -O eigen3.zip && \
@@ -78,7 +78,7 @@ make -j$(nproc) && \
 make install && \
 ldconfig && \
 cd / && \
-rm -rf /eigen3 \
+rm -rf /eigen3
 
 # Install Pangolin
 RUN git clone https://github.com/stevenlovegrove/Pangolin.git && \
@@ -87,4 +87,4 @@ make -j$(nproc) && \
 make install && \
 ldconfig && \
 cd / && \
-rm -rf /Pangolin \
+rm -rf /Pangolin
