@@ -19,5 +19,5 @@ mkdir build && cd build && cmake .. && make && make install && \
 git clone git@github.com:laurentkneip/opengv.git && cd opengv && \
 git checkout 2e2d21917fd2fb75f2134e6d5be7a2536cbc7eb1 && \
 mkdir build && cd build && cmake .. && make && make install && \
-git clone git@github.com:lrse/sptam.git && cd sptam && \
+git clone git@github.com:lrse/sptam.git && cd sptam && git submodule update --init --recursive && \
 catkin_make --pkg sptam -DCMAKE_BUILD_TYPE=RelWithDebInfo -DUSE_LOOPCLOSURE=ON -DSINGLE_THREAD=OFF -DSHOW_TRACKED_FRAMES=ON -DSHOW_PROFILING=ON -DPARALLELIZE=ON
