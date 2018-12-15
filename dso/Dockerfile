@@ -14,11 +14,10 @@ cd libzip-1.1.1/ && \
 ./configure && \
 make && \
 sudo make install && \
-sudo cp lib/zipconf.h /usr/local/include/zipconf.h
+sudo cp lib/zipconf.h /usr/local/include/zipconf.h && \
+cd ..
 
-RUN cd .. && \
-mkdir build && \
-cd build && \
+RUN mkdir build && cd build && \
 cmake .. && \
 make -j$(nproc) && \
 make install
