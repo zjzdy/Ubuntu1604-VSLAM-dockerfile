@@ -1,4 +1,4 @@
-FROM ubuntu-1604-vslam-base:latest
+FROM zjzdy/ubuntu-1604-vslam-base:latest
 LABEL maintainer "zjzengdongyang@163.com"
 
 

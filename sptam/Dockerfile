@@ -1,4 +1,4 @@
-FROM ubuntu-1604-vslam-base:ros
+FROM zjzdy/ubuntu-1604-vslam-base:ros
 LABEL maintainer "zjzengdongyang@163.com"
 
 RUN mkdir /sptam && cd /sptam && \
