@@ -1,10 +1,5 @@
-FROM ubuntu-1604-vslam-base:latest
+FROM ubuntu-1604-vslam-ros:latest
 LABEL maintainer "zjzengdongyang@163.com"
-
-RUN apt-get -y update && \
-apt-get -y install ros-kinetic-desktop && \
-apt-get clean && \
-rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mkdir /sptam && cd /sptam && \
 git clone git@github.com:lrse/ros-utils.git && cd ros-utils && \
