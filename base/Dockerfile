@@ -9,7 +9,7 @@ libgtk2.0-dev \
 libjpeg-dev libjasper-dev libpng-dev libtiff-dev \
 libopenexr-dev cmake python-dev \
 python-numpy python-tk libtbb-dev \
-libeigen2-dev yasm libfaac-dev \
+libeigen2-dev libeigen3-dev yasm libfaac-dev \
 libopencore-amrnb-dev libopencore-amrwb-dev \
 libtheora-dev libvorbis-dev libxvidcore-dev \
 libx264-dev libqt4-dev libqt4-opengl-dev \
@@ -68,7 +68,7 @@ RUN wget http://bitbucket.org/eigen/eigen/get/3.3.7.zip -O eigen3.zip && \
 unzip -q eigen3.zip && \
 mv /eigen-eigen-323c052e1731 /eigen3 && \
 rm eigen3.zip && \
-mkdir /eigen/build && cd /eigen/build && \
+mkdir /eigen3/build && cd /eigen3/build && \
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D BUILD_PYTHON_SUPPORT=ON \
 -D CMAKE_INSTALL_PREFIX=/usr/local .. \
