@@ -63,23 +63,6 @@ ldconfig && \
 cd / && \
 rm -rf /opencv /opencv_contrib
 
-# Install Eigen3
-RUN wget http://bitbucket.org/eigen/eigen/get/3.3.7.zip -O eigen3.zip && \
-unzip -q eigen3.zip && \
-mv /eigen-eigen-323c052e1731 /eigen3 && \
-rm eigen3.zip && \
-mkdir /eigen3/build && cd /eigen3/build && \
-cmake -D CMAKE_BUILD_TYPE=RELEASE \
--D BUILD_PYTHON_SUPPORT=ON \
--D CMAKE_INSTALL_PREFIX=/usr/local .. \
-&& \
-cd /eigen3/build && \
-make -j$(nproc) && \
-make install && \
-ldconfig && \
-cd / && \
-rm -rf /eigen3
-
 # Install Pangolin
 RUN git clone https://github.com/stevenlovegrove/Pangolin.git && \
 cd Pangolin && mkdir build && cd build && cmake .. && \
