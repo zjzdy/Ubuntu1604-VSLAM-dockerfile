@@ -13,8 +13,7 @@ cd kindr && \
 mkdir build && \
 cd build && \
 cmake .. && \
-make -j$(nproc) && \
-cd .."
+make -j$(nproc)"
 
 RUN bash -c "cd rovio_ws/src && source /opt/ros/kinetic/setup.bash && \
 git clone https://github.com/ethz-asl/rovio.git && cd rovio && \
