@@ -11,12 +11,12 @@ cd 3rdparty/line_descriptor && \
 mkdir build && \
 cd build && \
 cmake .. && \
-make -j$(nproc) && \
-make install && cd ../../.. && \
+make -j$(nproc) && cd ../../.. && \
 mkdir build && \
 cd build && \
 cmake .. && \
-make -j$(nproc)
+make -j$(nproc) && \
+make install
 
 RUN git clone https://github.com/rubengooj/pl-slam.git && cd pl-slam && \
 mkdir build && \
