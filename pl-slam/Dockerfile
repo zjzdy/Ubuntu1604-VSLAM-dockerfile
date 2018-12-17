@@ -15,8 +15,7 @@ make -j$(nproc) && cd ../../.. && \
 mkdir build && \
 cd build && \
 cmake .. && \
-make -j$(nproc) && \
-make install
+make -j$(nproc)
 
 RUN git clone https://github.com/rubengooj/pl-slam.git && cd pl-slam && \
 mkdir build && \

@@ -28,4 +28,4 @@ mkdir build && cd build && cmake .. && make && make install && cd ../.. && \
 rm -rf ros-utils g2o DLib DBoW2 DLoopDetector opengv && \
 git clone https://github.com/lrse/sptam.git && cd sptam && git submodule update --init --recursive"
 
-RUN bash -c "cd /sptam && && source /opt/ros/kinetic/setup.bash && catkin_make --pkg sptam -DCMAKE_BUILD_TYPE=RelWithDebInfo -DUSE_LOOPCLOSURE=ON -DSINGLE_THREAD=OFF -DSHOW_TRACKED_FRAMES=ON -DSHOW_PROFILING=ON -DPARALLELIZE=ON"
+RUN bash -c "cd /sptam && source /opt/ros/kinetic/setup.bash && catkin_make --pkg sptam -DCMAKE_BUILD_TYPE=RelWithDebInfo -DUSE_LOOPCLOSURE=ON -DSINGLE_THREAD=OFF -DSHOW_TRACKED_FRAMES=ON -DSHOW_PROFILING=ON -DPARALLELIZE=ON"
