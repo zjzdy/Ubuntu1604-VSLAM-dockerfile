@@ -18,5 +18,4 @@ cp lib/zipconf.h /usr/local/include/zipconf.h
 
 RUN mkdir stereo-dso/build && cd stereo-dso/build && \
 cmake .. && \
-make -j$(nproc) && \
-make install
+make -j$(nproc)
