@@ -17,6 +17,9 @@ cd build && \
 cmake .. && \
 make -j$(nproc)
 
+RUN git clone https://github.com/RainerKuemmerle/g2o.git && cd g2o && \
+mkdir build && cd build && cmake .. && make && make install && rm -rf /g2o
+
 RUN git clone https://github.com/rubengooj/pl-slam.git && cd pl-slam && \
 mkdir build && \
 cd build && \
