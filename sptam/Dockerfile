@@ -2,7 +2,7 @@ FROM zjzdy/ubuntu-1604-vslam-base:ros
 LABEL maintainer "zjzengdongyang@163.com"
 
 RUN apt-get -y update && \
-apt-get -y install 	ros-kinetic-tf2-geometry-msgs libgtest-dev && \
+apt-get -y install ros-kinetic-image-geometry ros-kinetic-pcl-ros ros-kinetic-tf2-geometry-msgs libgtest-dev && \
 apt-get clean && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
